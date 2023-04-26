@@ -135,4 +135,11 @@ nav {
 		box-sizing: border-box;
 		background-color: rgba(255,255,255,.5);
 	}
+
+	body {
+		background: url(images/turtle.jpg) no-repeat top left fixed;
+		-webkit-background-size: cover;
+		background-size: cover;
+		font-family: 'Lato', sans-serif;
+	}
 }
