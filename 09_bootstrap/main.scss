@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+body, html{
+    height: 100%;
+}
+
+$colors: (
+    primary: #67a8e2,
+    primary-light: lighten(#023867, 40%),
+);
+
+$font_main: 'Roboto Condensed', 'san-serif';
+$padding: 15px;
+$borders: 15px;
+
+$tablet: 800px;
+
+@mixin tablet{
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+// @function function-name($args){
+//     @return value-to-be-returned;
+// }
+
+@function color($color-name){
+    @return map-get($colors, $color-name);
+}
+
+body{
+    font-family: $font-main;
+    margin: 0;
+    background-color: color(primary);
+
+    #container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+
+    }
+
+    img{
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+            height: 250px;
+      }
+}
+
+main{
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 50% auto;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li{
+            margin-bottom: 10px;
+            strong{
+                display: inline-block;
+                margin-left: max(40px);
+            }
+        }
+    }
+        
+        h1{
+            font-size: 2em;
+            margin-top: 10px;
+            text-transform: uppercase;
+
+            @include tablet {
+                width: 30%;
+                font-style: 4em;
+                line-height: 0.9em;
+            }
+    }
+    }
