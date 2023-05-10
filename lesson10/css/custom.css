@@ -1,0 +1,41 @@
+caption {
+  caption-side: top;
+}
+
+.table-dark {
+  --bs-table-bg: #198754;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (min-width: 576px) {
+  section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  img{
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;   
+}
+
+.parent{
+  opacity: 50%;
+  transition: 3s;
+}
+
+.parent:hover{
+  transition: 3s;
+  opacity: 100%;
+}
+}/*# sourceMappingURL=custom.css.map */
