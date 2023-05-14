@@ -1,0 +1,159 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Lato|Zilla+Slab:300,400');
+body {
+	height: 100%;
+	  width: 85%;
+	  margin: 1em auto 0;
+	  font: 90%/1.5 Georgia, "Times New Roman", serif;
+	  background-image: linear-gradient(to top, lightblue, white);
+  }
+  h1 {
+	  font-family: Verdana, Geneva, sans-serif;
+	  font-size: 2.8em;
+	  font-weight: bold;
+	  color: #0D1F59;
+	  text-align: center;
+  }
+  button {
+	text-transform: uppercase;
+	background-color: rgb(133, 160, 193);
+	padding: 7px;
+	border: none;
+	border-radius: 5px;
+	margin: 3px;
+}
+  .buttons {
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+}
+  .blue-eyes .eye-color {
+	  fill: #175282;	
+}
+
+  .sad .mouth{
+	transform:rotate(180deg) scale(.5);
+	transform-origin: 340px 390px;
+}
+
+@keyframes moveEyes{
+	20%{
+		transform: translate(-18px, -20px);
+	}
+
+	40%{
+		transform: translate(0, 0);
+	}
+
+	65%{
+		transform: translate(18px, -20px);
+	}
+}
+
+.move-around .inner-eye-group {
+	animation: moveEyes 12s infinite;
+}
+
+@keyframes leftWhiskers{
+	20%{
+		transform: rotate(5deg);
+	}
+
+	60%{
+		transform: rotate(-5deg);
+	}
+}
+
+.move-around .left-whiskers {
+	animation: leftWhiskers 3s infinite;
+	transform-origin: 325px 350px;
+}
+
+@keyframes rightWhiskers{
+	5%{
+		transform: rotate(-2deg);
+	}
+
+	90%{
+		transform: rotate(7deg);
+	}
+}
+
+.move-around .right-whiskers {
+	animation: rightWhiskers 3s infinite;
+	transform-origin: 325px 350px;
+}
+
+
+@keyframes move{
+	20%{
+		transform: rotateY(10deg) rotateX(10deg);
+	}
+
+	40% {
+		transform: rotateY(25deg) rotateX(10deg);
+	}
+
+	60%{
+		transform: rotateY(-10deg) rotateX(-10deg);
+	}
+
+	80%{
+		transform: rotateY(-10deg) rotateX(-16deg);
+	}
+
+}
+
+.move-around {
+	animation: move 8s infinite;
+}
+
+.svg-container {
+	perspective: 1000px;
+}
+
+.row {
+	display: flex;
+}
+
+.col-md-4{
+	flex: 50%;
+	padding: 16px;
+	height: 250px;
+}
+
+@media(max-width: 600px)  {
+	.buttons {
+		display: flex; 
+        flex-direction: column;
+		text-align: center;
+        flex-wrap: nowrap; 
+        justify-content: space-around; 
+		padding: 0;
+		margin: 0;
+	}	
+
+	.row{
+		flex-direction: column;
+	}
+	
+	.col-md-4{
+		display: flex; 
+	}
+
+	body{
+		background-image: linear-gradient(to top, lightblue, white);
+		background-size: cover;
+	}
+
+	.svg-container {
+		display: flex;
+		width: 100%;
+		overflow: hidden; 
+	}
+
+	body {
+		background-image: linear-gradient(to bottom, lightblue, rgb(28, 139, 209));
+		font-family: 'Lato', sans-serif;
+	  }
+}
