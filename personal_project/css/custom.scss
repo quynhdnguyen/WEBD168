@@ -1,0 +1,103 @@
+
+
+@media (max-width: 768px){
+    section{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 576px){
+    section{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+} 
+
+@media (min-width: 375px)
+{
+    img{
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .header {
+        height: 10vh;
+        background-image: 
+        linear-gradient(to right bottom, 
+         rgba(184, 220, 230, 0.8),
+         rgba(88, 136, 204, 0.8)),
+         url('https://images.pexels.com/photos/227396/pexels-photo-227396.jpeg');
+        
+      background-size: cover;
+        background-position: top;
+        position: relative;
+      
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+      }
+      .text-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      
+      .heading-primary {
+        color: #fff;
+        text-transform: uppercase;
+      
+        backface-visibility: hidden;
+        margin-bottom: 30px;
+      }
+      
+      .heading-primary-main {
+        display: block;
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 5px;
+      }
+      
+      .heading-primary-sub {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 7.4px;
+      }
+      
+      .btn:link,
+      .btn:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s;
+        position: relative;
+      }
+      
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .btn:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .btn-white {
+        background-color: #fff;
+        color: #777;
+      font-size: 14px;
+      }
+}
+
+$icon-link-gap:               .375rem;
+$icon-link-underline-offset:  .25em;
+$icon-link-icon-size:         1em;
+$icon-link-icon-transition:   .2s ease-in-out transform;
+$icon-link-icon-transform:    translate3d(.25em, 0, 0);
